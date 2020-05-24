@@ -1,0 +1,52 @@
+<htmL>
+        <head>
+            <meta charset="UTF-8">
+            <title>Curso de Javascript - DOM</title>
+        </head>
+    <body>
+        <div id="app">
+        
+            
+            <input type="text" name="nome" id="nome" class="nome"/>
+            <button class="btn">adicionar</button>
+        </div>
+        
+    
+        <script>
+            /*busque um elemento pelo seu id
+              var inputElement = document.getElementById("nome");
+            */
+
+            /*busque um elemento pela tag, esse metodo sempre retorna um vetor, pois não consegue garantir
+              que vai existir apenas uma tag daquela referencia.
+              Caso tenha certeza que vai utilizar apenas um tagName colocar getElementsByTagName("input")[0]           
+              var inputName = document.getElementsByTagName("input");
+            */ 
+
+            /*Busque um elemento pela sua class, assim como o anterior retorna um vetor.
+              var inputClass = document.getElementsByClassName("input");
+            */   
+
+            /*Percorre a DOM do elemento, informa todo o caminho até chegar no campo desejado.
+              Por padrão retorna um unico elemento, mas se utilizado como querySelectorAll retorna tudo oq encontrar
+              var inputQuery = document.querySelector("body div#app input");
+              Quando utilizado com [] pode se informar o id do elemento
+              var inputQuery = document.querySelector("input[name=nome]");  
+            */  
+
+              var inputQuery = document.querySelector("input[name=nome]")  
+              var btnElement = document.querySelector("button.btn");  
+
+              btnElement.onclick = function(){
+
+                  //recuperar texto dentro do campo e exibir na tela
+                  var textDigitado = inputQuery.value;
+                  alert(textDigitado);
+              }
+
+              
+
+
+        </script>
+    </body>    
+    </htmL>

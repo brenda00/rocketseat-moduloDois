@@ -1,0 +1,35 @@
+<htmL>
+        <head>
+            <meta charset="UTF-8">
+            <title>Curso de Javascript - DOM</title>
+        </head>
+    <body>
+        <div id="app">
+            <!--quando pressionar e soltar a tecla-->
+            <input id="nome" />
+            <button class="btn">adicionar</button><br><br><br>
+        </div>
+        
+    
+        <script>
+
+
+            var linkElement = document.createElement("a");
+            linkElement.setAttribute("href", "https://skylab.rocketseat.com.br/node/curso-java-script/group/manipulando-a-dom/lesson/lidando-com-elementos");
+            linkElement.setAttribute("title", "Curso skylab");
+            
+            //criando elemento mesmo sem ele existir no html
+            var textElement = document.createTextNode("Acessar site");
+            linkElement.appendChild(textElement);
+
+            //passando o elemento para o htm
+            var containerElement = document.querySelector("#app");
+            containerElement.appendChild(linkElement);
+
+            //removendo elemento do html
+            var inputElement = document.querySelector("#nome");
+            containerElement.removeChild(inputElement);
+        
+        </script>
+    </body>    
+    </htmL>

@@ -1,0 +1,23 @@
+<htmL>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso de Javascript - DOM</title>
+    </head>
+<body>
+    <div id="app">
+        <button onclick="mostraAlerta()">click no botão</button>
+
+        <button onmouseover="mostraAlerta()">passe o mouse no botão</button><br><br><br>
+
+        <!--quando pressionar e soltar a tecla-->
+        <input onkeypress="mostraAlerta()"/>
+    </div>
+    
+
+    <script>
+        function mostraAlerta(){
+            alert("Botão foi clicado");
+        }
+    </script>
+</body>    
+</htmL>
